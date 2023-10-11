@@ -286,6 +286,11 @@ impl AsRangedCoord for Range<NaiveDate> {
     type Value = NaiveDate;
 }
 
+impl AsRangedCoord for Range<NaiveDateTime> {
+    type CoordDescType = RangedDate<NaiveDateTime>;
+    type Value = NaiveDateTime;
+}
+
 /// Indicates the coord has a monthly resolution
 ///
 /// Note: since month doesn't have a constant duration.
